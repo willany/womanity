@@ -62,8 +62,6 @@
     $array_politicas_publicas = $edit->getPoliticasPublicasList();  
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
-
-    
 ?>       
 
 <div class="row form_inicial">

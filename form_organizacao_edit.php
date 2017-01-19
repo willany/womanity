@@ -63,8 +63,6 @@
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
 
-    
-
 ?>
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
@@ -1446,7 +1444,7 @@
 
 <!-- 28 Organizacao-->
 
-<h4>18. A sua organização realiza monitoramento e avaliação sistematizada das atividades?*</h4>
+<h4>19. A sua organizaçāo tem uma estratégia de comunicação própria?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>

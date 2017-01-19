@@ -1,4 +1,4 @@
-<!-- Funçãoo limite caracteres tel,celular,cep, cnpj -->
+// Funçãoo limite caracteres tel,celular,cep, cnpj 
 			function ExitField(id,idmsg,msg,maxSize){
 			
 			  var value = document.getElementById(id).value;

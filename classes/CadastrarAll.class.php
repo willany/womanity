@@ -979,14 +979,13 @@ class CadastrarAll extends Conexao {
         }
         catch (Exception $e){
               $pdo->rollback();
-              //echo $e->getMessage();
-
-                $inserir_erro = $pdo->prepare("insert into erro_logs (erro, data, usuario_id)
-                                   values (?, ?, ?)");
-                $inserir_erro->bindValue(1, $e->getMessage());
-                $inserir_erro->bindValue(2, $data_atual);
-                $inserir_erro->bindValue(3, $usuario_id);
-                $inserir_erro->execute();
+              
+            $inserir_erro = $pdo->prepare("insert into erro_logs (erro, data, usuario_id)
+                               values (?, ?, ?)");
+            $inserir_erro->bindValue(1, $e->getMessage());
+            $inserir_erro->bindValue(2, $data_atual);
+            $inserir_erro->bindValue(3, $this->getUsuarioId());
+            $inserir_erro->execute();
 
 
                echo "<script type='text/javascript'>
@@ -1363,6 +1362,14 @@ class CadastrarAll extends Conexao {
         catch (Exception $e){
               $pdo->rollback();
               //echo $e->getMessage();
+            
+            $inserir_erro = $pdo->prepare("insert into erro_logs (erro, data, usuario_id)
+                               values (?, ?, ?)");
+            $inserir_erro->bindValue(1, $e->getMessage());
+            $inserir_erro->bindValue(2, $data_atual);
+            $inserir_erro->bindValue(3, $this->getUsuarioId());
+            $inserir_erro->execute();
+            
                echo "<script type='text/javascript'>
 
                         sweetAlert({

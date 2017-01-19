@@ -30,15 +30,35 @@
         <script src="assets/js/jquery.backstretch.min.js"></script>
         <script src="assets/js/retina-1.1.0.min.js"></script>
         <script src="assets/js/sweetalert.min.js"></script>
+        <script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="assets/js/config-messages.js" type="text/javascript"></script>
         <script src="assets/js/scripts.js"></script>
         <!--<script src="assets/js/validator.min.js"></script>-->
         <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
-        <script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
-        <script src="assets/js/config-messages.js" type="text/javascript"></script>
+        
+        
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
         <![endif]-->
+
+        <script type="text/javascript">
+            function logout(){
+                sweetAlert({
+                  title: "Deseja sair?",
+                  text: "Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5",
+                  type: "warning",
+                  showCancelButton: true,
+                  cancelButtonText: 'Continuar preenchendo',
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Sair",
+                  closeOnConfirm: false
+                },
+                function(){
+                  window.location.href = '?logout=sair';
+                });
+            }
+        </script>
 
     </head>
 
@@ -79,7 +99,7 @@
 						<li>
 
                             <span>Seja bem-vindo(a)</span><br>
-                            <span title="Sair do Sistema"><a href="?logout=sair" class="logout">Sair do sistema</a></span>
+                            <span title="Sair do Sistema"><a href="#" onclick="logout();" class="logout">Sair do sistema</a></span>
 						</li>
 					</ul>
 				</div>
